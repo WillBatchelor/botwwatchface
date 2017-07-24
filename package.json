@@ -1,0 +1,21 @@
+{
+    "author": "batchelorwd8@gmail.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "zelda-botw-watchface",
+    "pebble": {
+        "displayName": "ZELDA-BOTW-WATCHFACE",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "uuid": "63881520-9fad-4a33-acd2-ee758f7c552a",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
