@@ -25,7 +25,7 @@ Layer *window_layer = window_get_root_layer(window);
 GRect bounds = layer_get_bounds(window_layer);	
 	
 s_time_layer = text_layer_create(
-	GRect(4, PBL_IF_ROUND_ELSE(58, 52), bounds.size.w, 50));
+	GRect(4, PBL_IF_ROUND_ELSE(8, 2), bounds.size.w, 50));
 	
 text_layer_set_background_color(s_time_layer, GColorClear);
 text_layer_set_text_color(s_time_layer, GColorBlack);
