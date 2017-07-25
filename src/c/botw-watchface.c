@@ -8,6 +8,7 @@ static Window *s_main_window;
 static TextLayer *s_time_layer;
 
 //static Textlayer *s_time_hex_layer;
+//static GFont *s_time_hex_font;
 
 static void update_time() {
   // Get a tm structure
