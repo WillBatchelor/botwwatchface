@@ -1,4 +1,5 @@
 #include <pebble.h>
+#include <time.h>
 //#include "botw-watchface.h"
 
 static Window *s_main_window;
