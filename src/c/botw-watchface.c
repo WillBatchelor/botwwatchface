@@ -30,7 +30,7 @@ s_time_layer = text_layer_create(
 	
 text_layer_set_background_color(s_time_layer, GColorBlack);
 text_layer_set_text_color(s_time_layer, GColorCyan);
-text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
+text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_36_BOLD));
 text_layer_set_text_alignment(s_time_layer, GTextAlignmentLeft);
 	
 layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
