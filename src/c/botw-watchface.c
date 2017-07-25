@@ -7,7 +7,7 @@ static Window *s_main_window;
 
 static TextLayer *s_time_layer;
 
-static TextLayer *s_time_hex_layer;
+//static TextLayer *s_time_hex_layer;
 //static GFont *s_time_hex_font;
 
 static void update_time() {
@@ -21,7 +21,7 @@ static void update_time() {
 
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, s_buffer);
-	text_layer_set_text(s_time_hex_layer, "%x");
+	//text_layer_set_text(s_time_hex_layer, "%x");
 }
 
 
@@ -39,7 +39,7 @@ text_layer_set_text_alignment(s_time_layer, GTextAlignmentLeft);
 	
 layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
 
-s_time_hex_layer = text_layer_create(
+/*s_time_hex_layer = text_layer_create(
 	GRect(46, PBL_IF_ROUND_ELSE(50, 44), bounds.size.w, 16));
 	
 text_layer_set_background_color(s_time_layer, GColorBlack);
@@ -48,14 +48,15 @@ text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14_BOLD)
 text_layer_set_text_alignment(s_time_layer, GTextAlignmentLeft);
 	
 layer_add_child(window_layer, text_layer_get_layer(s_time_hex_layer));
-
+*/
 	
 update_time();
 	
 }
 
 static void main_window_unload(Window *window) {
-	text_layer_destroy(s_time_layer);	
+	text_layer_destroy(s_time_layer);
+	//text_layer_destroy(s_time_hex_layer);
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
