@@ -1,15 +1,23 @@
 {
-    "author": "batchelorwd8@gmail.com",
+    "author": "themeta",
     "dependencies": {},
     "keywords": [],
     "name": "zelda-botw-watchface",
     "pebble": {
-        "displayName": "ZELDA-BOTW-WATCHFACE",
+        "displayName": "Shiekah Slate Watchface",
         "enableMultiJS": true,
         "messageKeys": [],
         "projectType": "native",
         "resources": {
-            "media": []
+            "media": [
+                {
+                    "characterRegex": "[0-9a-zA-Z]",
+                    "file": "fonts/Sheikah Complete.ttf",
+                    "name": "FONT_SC_34",
+                    "targetPlatforms": null,
+                    "type": "font"
+                }
+            ]
         },
         "sdkVersion": "3",
         "targetPlatforms": [
