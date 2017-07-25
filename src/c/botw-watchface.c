@@ -27,8 +27,8 @@ GRect bounds = layer_get_bounds(window_layer);
 s_time_layer = text_layer_create(
 	GRect(4, PBL_IF_ROUND_ELSE(8, 2), bounds.size.w, 50));
 	
-text_layer_set_background_color(s_time_layer, GColorClear);
-text_layer_set_text_color(s_time_layer, GColorBlack);
+text_layer_set_background_color(s_time_layer, GColorBlack);
+text_layer_set_text_color(s_time_layer, GColorPictonBlue);
 text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
 text_layer_set_text_alignment(s_time_layer, GTextAlignmentLeft);
 	
@@ -48,6 +48,7 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 
 static void init() {
 	s_main_window = window_create();
+	window_set_background_color(s_main_window, GColorBlack);
 	
 	window_set_window_handlers(s_main_window, (WindowHandlers) {
 		.load = main_window_load,
