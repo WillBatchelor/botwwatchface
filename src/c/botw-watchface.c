@@ -22,7 +22,7 @@ static void update_time() {
   time_t mktime(struct tm *tick_time)
 	
 	static char s_hext_buffer[15];
-	snprintf(s_hext_buffer, 15, "%p", &mktime); 
+	snprintf(s_hext_buffer, 15, "%X", &mktime); 
 
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, s_buffer);
