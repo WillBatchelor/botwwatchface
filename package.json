@@ -13,7 +13,7 @@
                 {
                     "characterRegex": "[0-9a-zA-Z]",
                     "file": "fonts/Sheikah Complete.ttf",
-                    "name": "FONT_SC_34",
+                    "name": "FONT_SC_BOLD_12",
                     "targetPlatforms": null,
                     "type": "font"
                 }
