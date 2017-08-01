@@ -19,10 +19,11 @@ static void update_time() {
   static char s_buffer[8];
   strftime(s_buffer, sizeof(s_buffer), clock_is_24h_style() ? "%H:%M" : "%I:%M", tick_time);
 
-  time_t mktime(struct tm *tick_time)
+unsigned int h;
+	h=(unsigned int)time(NULL); 
 	
-	static char s_hext_buffer[15];
-	snprintf(s_hext_buffer, 15, "%X", &mktime); 
+static char s_hext_buffer[20];
+snprintf(s_hext_buffer, 20, "%X", h); 
 
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, s_buffer);
