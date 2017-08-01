@@ -18,9 +18,11 @@ static void update_time() {
   // Write the current hours and minutes into a buffer
   static char s_buffer[8];
   strftime(s_buffer, sizeof(s_buffer), clock_is_24h_style() ? "%H:%M" : "%I:%M", tick_time);
+
+  time_t mktime(struct tm *tick_time)
 	
 	static char s_hext_buffer[15];
-	snprintf(s_hext_buffer, 15, "%p", tick_time); 
+	snprintf(s_hext_buffer, 15, "%p", &mktime); 
 
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, s_buffer);
