@@ -18,10 +18,13 @@ static void update_time() {
   // Write the current hours and minutes into a buffer
   static char s_buffer[8];
   strftime(s_buffer, sizeof(s_buffer), clock_is_24h_style() ? "%H:%M" : "%I:%M", tick_time);
+	
+	static char s_hext_buffer[15];
+	snprintf(s_hext_buffer, 15, "%p", tick_time); 
 
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, s_buffer);
-	//text_layer_set_text(s_time_hex_layer, s_buffer);
+	text_layer_set_text(s_time_hex_layer, s_hext_buffer);
 }
 
 
@@ -33,7 +36,7 @@ s_time_layer = text_layer_create(
 	GRect(0, 2, bounds.size.w, 44));
 	
 text_layer_set_background_color(s_time_layer, GColorClear);
-text_layer_set_text_color(s_time_layer, GColorVividCerulean);
+text_layer_set_text_color(s_time_layer,GColorPictonBlue);
 text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_MEDIUM_NUMBERS));
 text_layer_set_text_alignment(s_time_layer, GTextAlignmentLeft);
 	
@@ -44,7 +47,7 @@ text_layer_set_background_color(s_time_hex_layer, GColorClear);
 text_layer_set_text_color(s_time_hex_layer, GColorCobaltBlue);
 text_layer_set_font(s_time_hex_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
 text_layer_set_text_alignment(s_time_hex_layer, GTextAlignmentLeft);
-text_layer_set_text(s_time_hex_layer, "This is a test...");
+//text_layer_set_text(s_time_hex_layer, "This is a test...");
 
 layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
 
