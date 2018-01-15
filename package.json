@@ -11,8 +11,14 @@
         "resources": {
             "media": [
                 {
+                    "file": "fonts/InriaSans-Regular01.ttf",
+                    "name": "INRIA_SANS_REGULAR_38",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
                     "file": "fonts/InriaSans-Regular.ttf",
-                    "name": "INRIA_SANS_REGULAR_35",
+                    "name": "INRIA_SANS_REGULAR_33",
                     "targetPlatforms": null,
                     "type": "font"
                 },

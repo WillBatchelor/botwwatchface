@@ -7,7 +7,8 @@ static Window *s_main_window;
 
 static TextLayer *s_time_layer;
 static TextLayer *s_date_layer;
-static GFont s_date_time_font; 
+static GFont s_time_font;
+static GFont s_date_font;
 
 static TextLayer *s_time_hex_layer;
 static GFont s_hex_font;
@@ -46,12 +47,14 @@ static void main_window_load(Window *window) {
 	s_time_layer = text_layer_create(
 	GRect(0, 2, bounds.size.w, 44));
 
-	s_date_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_INRIA_SANS_REGULAR_35));
+	s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_INRIA_SANS_REGULAR_38));	
+	
+	s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_INRIA_SANS_REGULAR_33));
 	
 	text_layer_set_background_color(s_time_layer, GColorClear);
 	text_layer_set_text_color(s_time_layer,GColorPictonBlue);
 	//text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_MEDIUM_NUMBERS));
-	text_layer_set_font(s_time_layer, s_date_time_font);
+	text_layer_set_font(s_time_layer, s_time_font);
 	text_layer_set_text_alignment(s_time_layer, GTextAlignmentLeft);
 
 	s_hex_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SC_BOLD_12));
@@ -70,7 +73,7 @@ static void main_window_load(Window *window) {
 	text_layer_set_background_color(s_date_layer, GColorClear);
 	text_layer_set_text_color(s_date_layer,GColorPictonBlue);
 	//text_layer_set_font(s_date_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_MEDIUM_NUMBERS));
-	text_layer_set_font(s_date_layer, s_date_time_font);
+	text_layer_set_font(s_date_layer, s_date_font);
 	text_layer_set_text_alignment(s_date_layer, GTextAlignmentLeft);
 
 	
