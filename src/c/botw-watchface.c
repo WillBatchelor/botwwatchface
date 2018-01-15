@@ -121,7 +121,7 @@ static void init() {
 		.unload = main_window_unload 
 	});
 	
-	window_stack_push(s_main_window, true);
+	window_stack_push(s_main_window, false);
 
 	tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);	
 }
