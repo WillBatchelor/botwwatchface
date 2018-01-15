@@ -11,6 +11,12 @@
         "resources": {
             "media": [
                 {
+                    "file": "fonts/InriaSans-Regular.ttf",
+                    "name": "INRIA_SANS_REGULAR_24",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
                     "characterRegex": "[0-9a-zA-Z]",
                     "file": "fonts/Sheikah Complete.ttf",
                     "name": "FONT_SC_BOLD_12",
@@ -21,11 +27,7 @@
         },
         "sdkVersion": "3",
         "targetPlatforms": [
-            "aplite",
-            "basalt",
-            "chalk",
-            "diorite",
-            "emery"
+            "basalt"
         ],
         "uuid": "63881520-9fad-4a33-acd2-ee758f7c552a",
         "watchapp": {
