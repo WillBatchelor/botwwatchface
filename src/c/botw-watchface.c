@@ -11,6 +11,7 @@ static GFont s_time_font;
 static GFont s_date_font;
 
 static TextLayer *s_time_hex_layer;
+static TextLayer *s_date_hex_layer;
 static GFont s_hex_font;
 
 static void update_time() {
@@ -36,7 +37,7 @@ static void update_time() {
   text_layer_set_text(s_time_layer, s_buffer);
 	text_layer_set_text(s_time_hex_layer, s_hext_buffer);
 	text_layer_set_text(s_date_layer, s_date_buffer);
-	//text_layer_set_text(s_date_layer, "test");
+	text_layer_set_text(s_date_hex_layer, s_date_buffer);
 }
 
 
@@ -70,11 +71,20 @@ static void main_window_load(Window *window) {
 	s_date_layer = text_layer_create(
 		GRect(0, 56, bounds.size.w, 44));
 	
+	
 	text_layer_set_background_color(s_date_layer, GColorClear);
 	text_layer_set_text_color(s_date_layer,GColorPictonBlue);
 	//text_layer_set_font(s_date_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_MEDIUM_NUMBERS));
 	text_layer_set_font(s_date_layer, s_date_font);
 	text_layer_set_text_alignment(s_date_layer, GTextAlignmentLeft);
+	
+	s_date_hex_layer = text_layer_create(
+	GRect(0, 97, bounds.size.w, 14));
+	
+	text_layer_set_background_color(s_date_hex_layer, GColorClear);
+	text_layer_set_text_color(s_date_hex_layer, GColorCobaltBlue);
+	text_layer_set_font(s_date_hex_layer, s_hex_font);
+	text_layer_set_text_alignment(s_date_hex_layer, GTextAlignmentLeft);
 
 	
 	layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
@@ -82,6 +92,8 @@ static void main_window_load(Window *window) {
 	layer_add_child(window_layer, text_layer_get_layer(s_time_hex_layer));
 
 	layer_add_child(window_layer, text_layer_get_layer(s_date_layer));
+	
+	layer_add_child(window_layer, text_layer_get_layer(s_date_hex_layer));
 
 	update_time();
 	
@@ -92,6 +104,7 @@ static void main_window_unload(Window *window) {
 	fonts_unload_custom_font(s_hex_font);
 	text_layer_destroy(s_time_hex_layer);
 	text_layer_destroy(s_date_layer);
+	text_layer_destroy(s_date_hex_layer);
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
