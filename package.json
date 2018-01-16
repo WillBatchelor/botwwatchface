@@ -11,7 +11,7 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/slate_icon_photo.png",
+                    "file": "images/slate_icon_photo_test.png",
                     "name": "SLATE_ICON_PHOTO",
                     "targetPlatforms": null,
                     "type": "bitmap"
@@ -39,7 +39,11 @@
         },
         "sdkVersion": "3",
         "targetPlatforms": [
-            "basalt"
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite",
+            "emery"
         ],
         "uuid": "63881520-9fad-4a33-acd2-ee758f7c552a",
         "watchapp": {
