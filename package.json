@@ -12,6 +12,7 @@
             "media": [
                 {
                     "file": "images/slate_icon_photo_test.png",
+                    "menuIcon": true,
                     "name": "SLATE_ICON_PHOTO",
                     "targetPlatforms": null,
                     "type": "bitmap"
