@@ -97,6 +97,17 @@ static void main_window_load(Window *window) {
 	text_layer_set_text_alignment(s_weather_layer, GTextAlignmentLeft);
 	text_layer_set_font(s_weather_layer, s_date_font);
 	text_layer_set_text(s_weather_layer, "Loading...");
+	
+	// Create temperature Sheikah Layer
+	s_weather_hex_layer = text_layer_create(
+    GRect(0, 146, bounds.size.w, 14));
+
+	// Style the text
+	text_layer_set_background_color(s_weather_hex_layer, GColorClear);
+	text_layer_set_text_color(s_weather_hex_layer, GColorCobaltBlue);
+	text_layer_set_text_alignment(s_weather_hex_layer, GTextAlignmentLeft);
+	text_layer_set_font(s_weather_hex_layer, s_hex_font);
+	text_layer_set_text(s_weather_hex_layer, "Weather");
 
 	
 	layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
@@ -108,6 +119,8 @@ static void main_window_load(Window *window) {
 	layer_add_child(window_layer, text_layer_get_layer(s_date_hex_layer));
 	
 	layer_add_child(window_layer,text_layer_get_layer(s_weather_layer));
+	
+	layer_add_child(window_layer,text_layer_get_layer(s_weather_hex_layer));
 
 	update_time();
 	
