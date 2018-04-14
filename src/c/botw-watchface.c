@@ -151,6 +151,9 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 	  app_message_outbox_send();
 	}
 }
+	//TO BE USED FOR: Transfering settings to watch
+//static void prv_inbox_received_handler(DictionaryIterator *iter, void *context) {
+//}
 
 static void inbox_received_callback(DictionaryIterator *iterator, void *context) {
 	// Store incoming information
@@ -197,6 +200,17 @@ static void init() {
 	window_stack_push(s_main_window, false);
 
 	tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);	
+
+// TO BE USED FOR: Transfering settings to watch.
+//void prv_init(void) {
+  // ...
+
+  // Open AppMessage connection
+ // app_message_register_inbox_received(prv_inbox_received_handler);
+ // app_message_open(128, 128);
+
+  // ...
+//}	
 	
 // Register callbacks
 app_message_register_inbox_received(inbox_received_callback);

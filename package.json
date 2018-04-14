@@ -1,17 +1,21 @@
 {
     "author": "themeta",
-    "dependencies": {},
+    "dependencies": {
+        "pebble-clay": "^1.0.4"
+    },
     "keywords": [],
     "name": "zelda-botw-watchface",
     "pebble": {
         "capabilities": [
-            "location"
+            "location",
+            "configurable"
         ],
         "displayName": "Shiekah Slate Watchface",
         "enableMultiJS": true,
         "messageKeys": [
             "TEMPERATURE",
-            "CONDITIONS"
+            "CONDITIONS",
+            "APIKEY"
         ],
         "projectType": "native",
         "resources": {
