@@ -4,9 +4,15 @@
     "keywords": [],
     "name": "zelda-botw-watchface",
     "pebble": {
+        "capabilities": [
+            "location"
+        ],
         "displayName": "Shiekah Slate Watchface",
         "enableMultiJS": true,
-        "messageKeys": [],
+        "messageKeys": [
+            "TEMPERATURE",
+            "CONDITIONS"
+        ],
         "projectType": "native",
         "resources": {
             "media": [
