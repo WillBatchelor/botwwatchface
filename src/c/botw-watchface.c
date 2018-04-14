@@ -71,7 +71,7 @@ static void main_window_load(Window *window) {
 	text_layer_set_text_alignment(s_time_hex_layer, GTextAlignmentLeft);
 
 	s_date_layer = text_layer_create(
-		GRect(PBL_IF_ROUND_ELSE(30,30), PBL_IF_ROUND_ELSE(56,56), bounds.size.w, 44));
+		GRect(PBL_IF_ROUND_ELSE(30,0), PBL_IF_ROUND_ELSE(56,56), bounds.size.w, 44));
 	
 	
 	text_layer_set_background_color(s_date_layer, GColorClear);
@@ -80,7 +80,7 @@ static void main_window_load(Window *window) {
 	text_layer_set_text_alignment(s_date_layer, GTextAlignmentLeft);
 	
 	s_date_hex_layer = text_layer_create(
-	GRect(PBL_IF_ROUND_ELSE(29,20), PBL_IF_ROUND_ELSE(97,97), bounds.size.w, 14));
+	GRect(PBL_IF_ROUND_ELSE(29,0), PBL_IF_ROUND_ELSE(97,97), bounds.size.w, 14));
 	
 	text_layer_set_background_color(s_date_hex_layer, GColorClear);
 	text_layer_set_text_color(s_date_hex_layer, GColorCobaltBlue);
