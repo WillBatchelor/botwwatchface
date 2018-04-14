@@ -49,7 +49,7 @@ static void main_window_load(Window *window) {
 	GRect bounds = layer_get_bounds(window_layer);	
 	
 	s_time_layer = text_layer_create(
-	GRect(PBL_IF_ROUND_ELSE(30,0), PBL_IF_ROUND_ELSE(2,2), bounds.size.w, 44));
+	GRect(PBL_IF_ROUND_ELSE(45,0), PBL_IF_ROUND_ELSE(2,2), bounds.size.w, 44));
 
 	s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_INRIA_SANS_REGULAR_38));	
 	
@@ -63,7 +63,7 @@ static void main_window_load(Window *window) {
 	s_hex_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_SC_BOLD_12));
 	
 	s_time_hex_layer = text_layer_create(
-	GRect(0, 48, bounds.size.w, 14));
+	GRect(PBL_IF_ROUND_ELSE(35,0), PBL_IF_ROUND_ELSE(48,48), bounds.size.w, 14));
 	
 	text_layer_set_background_color(s_time_hex_layer, GColorClear);
 	text_layer_set_text_color(s_time_hex_layer, GColorCobaltBlue);
@@ -71,7 +71,7 @@ static void main_window_load(Window *window) {
 	text_layer_set_text_alignment(s_time_hex_layer, GTextAlignmentLeft);
 
 	s_date_layer = text_layer_create(
-		GRect(0, 56, bounds.size.w, 44));
+		GRect(PBL_IF_ROUND_ELSE(30,30), PBL_IF_ROUND_ELSE(56,56), bounds.size.w, 44));
 	
 	
 	text_layer_set_background_color(s_date_layer, GColorClear);
@@ -80,7 +80,7 @@ static void main_window_load(Window *window) {
 	text_layer_set_text_alignment(s_date_layer, GTextAlignmentLeft);
 	
 	s_date_hex_layer = text_layer_create(
-	GRect(0, 97, bounds.size.w, 14));
+	GRect(PBL_IF_ROUND_ELSE(29,20), PBL_IF_ROUND_ELSE(97,97), bounds.size.w, 14));
 	
 	text_layer_set_background_color(s_date_hex_layer, GColorClear);
 	text_layer_set_text_color(s_date_hex_layer, GColorCobaltBlue);
@@ -89,7 +89,7 @@ static void main_window_load(Window *window) {
 	
 	// Create temperature Layer
 	s_weather_layer = text_layer_create(
-    GRect(0, 105, bounds.size.w, 44));
+    GRect(PBL_IF_ROUND_ELSE(28,0), PBL_IF_ROUND_ELSE(105,105), bounds.size.w, 44));
 
 	// Style the text
 	text_layer_set_background_color(s_weather_layer, GColorClear);
@@ -100,7 +100,7 @@ static void main_window_load(Window *window) {
 	
 	// Create temperature Sheikah Layer
 	s_weather_hex_layer = text_layer_create(
-    GRect(0, 146, bounds.size.w, 14));
+    GRect(PBL_IF_ROUND_ELSE(40,0), PBL_IF_ROUND_ELSE(146,146), bounds.size.w, 14));
 
 	// Style the text
 	text_layer_set_background_color(s_weather_hex_layer, GColorClear);
